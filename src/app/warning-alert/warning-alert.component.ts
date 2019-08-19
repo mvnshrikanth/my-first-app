@@ -22,7 +22,7 @@ export class WarningAlertComponent implements OnInit {
     this.serverCreationStatus = 'Server was created! ' + this.serverName;
   }
 
-  onUpdateServerName() {
-    this.serverName = (<HTMLInputElement>event.target).value;
-  }
+  // onUpdateServerName() {
+  //   this.serverName = (<HTMLInputElement>event.target).value;
+  // }
 }
