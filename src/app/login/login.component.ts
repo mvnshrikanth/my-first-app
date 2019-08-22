@@ -6,15 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  userName: string ='';
+  userName: string = '';
   message: string = "No user is added!";
   allowNewUser: boolean = false;
+  serverCreated: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   addUser() {
+    this.serverCreated=true;
     this.message = 'User added ' + this.userName;
     this.userName = "";
   }

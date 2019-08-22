@@ -9,6 +9,7 @@ export class WarningAlertComponent implements OnInit {
   allowNewServer: boolean = false;
   serverCreationStatus: string = 'No server was created!';
   serverName = 'TestServer';
+  servers = ['Test Server 1', 'Test Server 2'];
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -19,7 +20,8 @@ export class WarningAlertComponent implements OnInit {
   }
 
   onCreateServer() {
-    this.serverCreationStatus = 'Server was created! ' + this.serverName;
+    // this.serverCreationStatus = 'Server was created! ' + this.serverName;
+    this.servers.push(this.serverName);
   }
 
   // onUpdateServerName() {

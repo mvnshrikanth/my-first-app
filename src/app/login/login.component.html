@@ -3,4 +3,8 @@
 <!-- <input type="text" class="form-control" (input)="onUpdateUserNme($event)"> -->
 <!-- <p>{{userName}}</p> -->
 <button class="btn btn-primary" [disabled]="userName===''" (click)="addUser()">Add user ...</button>
-<p>{{message}}</p>
+<!-- <p>{{message}}</p> -->
+<p *ngIf="serverCreated; else noServer">Server was created {{message}}</p>
+<ng-template #noServer>
+    <p>No server was created!</p>
+</ng-template>
